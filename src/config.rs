@@ -96,8 +96,8 @@ lazy_static::lazy_static! {
     pub static ref APP_HOME_DIR: RwLock<String> = Default::default();
 }
 
-pub const LINK_DOCS_HOME: &str = "";
-pub const LINK_DOCS_X11_REQUIRED: &str = "";
+pub const LINK_DOCS_HOME: &str = "127.0.0.1";
+pub const LINK_DOCS_X11_REQUIRED: &str = "127.0.0.1";
 
 lazy_static::lazy_static! {
     pub static ref HELPER_URL: HashMap<&'static str, &'static str> = HashMap::from([
