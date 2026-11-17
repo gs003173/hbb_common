@@ -643,7 +643,7 @@ mod tests {
         Config::set_option("relay-server".to_string(), "127.0.0.1".to_string());
         Config::set_option(
             "api-server".to_string(),
-            "https://api.127.0.0.1".to_string(),
+            "https://127.0.0.1".to_string(),
         );
         assert_eq!(
             check_ws("[0:0:0:0:0:0:0:1]:21115"),
@@ -775,8 +775,8 @@ mod tests {
             "wss://127.0.0.1:8443/ws/relay"
         );
         assert_eq!(
-            check_ws("relay.127.0.0.1:21117"),
-            "wss://relay.127.0.0.1:8443/ws/relay"
+            check_ws("127.0.0.1:21117"),
+            "wss://127.0.0.1:8443/ws/relay"
         );
         // a peer's server or a relay on another host keeps the default port
         assert_eq!(check_ws("example.com:21116"), "wss://example.com/ws/id");
